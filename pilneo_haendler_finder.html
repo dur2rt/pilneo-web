@@ -10,16 +10,9 @@
 <style>
 :root{--gd:#0d3d28;--gm:#1a5e3a;--gb:#2d8a56;--gl:#eaf5ef;--ga:#4caf7a;--gold:#c8973e;--gold-lt:#fdf8ee;--cream:#f8f5f0;--white:#fff;--ink:#0f1410;--mid:#475569;--muted:#8a9aaa;--border:#dde8e2;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;}
-nav{background:var(--gd);padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.2);}
-.logo{display:flex;flex-direction:column;text-decoration:none;}
-.logo-w{font-family:"Figtree",sans-serif;font-weight:800;font-size:1.4rem;color:white;letter-spacing:-.04em;line-height:1;}
-.logo-l{height:1px;background:var(--gb);margin:3px 0 2px;}
-.logo-t{font-size:.55rem;font-weight:300;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;}
-.nav-links{display:flex;align-items:center;gap:1.75rem;}
-.nav-link{color:rgba(255,255,255,.7);font-size:.86rem;text-decoration:none;transition:color .2s;}
-.nav-link:hover,.nav-link.active{color:white;}
-.btn-nav{background:var(--gold);color:white;padding:.48rem 1.1rem;border-radius:100px;font-size:.8rem;font-weight:600;text-decoration:none;}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;margin:0;padding:0;}
+nav{display:none;}
+.logo,.logo-w,.logo-l,.logo-t,.nav-links,.nav-link,.btn-nav{display:none;}
 
 /* HERO */
 .page-hero{background:var(--gd);padding:2.5rem 2.5rem 2rem;position:relative;overflow:hidden;}
@@ -150,26 +143,7 @@ nav{background:var(--gd);padding:0 2.5rem;height:66px;display:flex;align-items:c
 </style>
 </head>
 <body>
-<div style="position:fixed;top:72px;right:16px;z-index:9998;">
-  <a href="https://pilneo.ch" style="display:flex;align-items:center;gap:.4rem;background:#0d3d28;color:white;font-family:DM Sans,sans-serif;font-size:.72rem;font-weight:600;padding:.45rem .9rem;border-radius:100px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.2);opacity:.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85">&#8592; Zur&#252;ck</a>
-</div>
 
-
-
-<nav>
-  <a href="#" class="logo">
-    <div class="logo-w">PILNEO</div>
-    <div class="logo-l"></div>
-    <div class="logo-t">E-Bike Akkus. Neu gedacht.</div>
-  </a>
-  <div class="nav-links">
-    <a href="https://pilneo.ch/collections/all" class="nav-link">Akkus kaufen</a>
-    <a href="https://pilneo.ch/pages/wie-es-funktioniert" class="nav-link">Wie es funktioniert</a>
-    <a href="pilneo_haendler_finder.html" class="nav-link active">Händler finden</a>
-    <a href="https://pilneo.ch/pages/haendler-werden" class="nav-link">Händler werden</a>
-    <a href="pilneo_akkufinder_v15.html">Akku finden →</a>
-  </div>
-</nav>
 
 <!-- HERO -->
 <div class="page-hero">
