@@ -8,20 +8,8 @@
 <style>:root{--gd:#0d3d28;--gm:#1a5e3a;--gb:#2d8a56;--gl:#eaf5ef;--ga:#4caf7a;--gold:#c8973e;--gold-lt:#fdf8ee;--cream:#f8f5f0;--white:#fff;--ink:#0f1410;--mid:#475569;--muted:#8a9aaa;--border:#dde8e2;--red:#e53e3e;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;}
-nav{background:var(--gd);padding:0 2.5rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.2);}
-.logo{display:flex;flex-direction:column;text-decoration:none;}
-.logo-w{font-family:"Figtree",sans-serif;font-weight:800;font-size:1.4rem;color:white;letter-spacing:-.04em;line-height:1;}
-.logo-l{height:1px;background:var(--gb);margin:3px 0 2px;}
-.logo-t{font-size:.55rem;font-weight:300;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;}
-.nav-right{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;}
-.cur-toggle{display:flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.1);border-radius:100px;padding:.25rem .35rem;}
-.cur-btn{font-size:.74rem;font-weight:600;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;padding:.2rem .6rem;border-radius:100px;font-family:"DM Sans",sans-serif;transition:all .2s;}
-.cur-btn.active{background:var(--gold);color:white;}
-.demo-bar{display:flex;align-items:center;gap:.5rem;background:rgba(200,151,62,.12);border:1px solid rgba(200,151,62,.3);border-radius:100px;padding:.28rem .75rem;font-size:.7rem;color:var(--gold);font-weight:600;}
-.demo-toggle{display:flex;align-items:center;gap:.35rem;cursor:pointer;}
-.demo-dot{width:9px;height:9px;border-radius:50%;background:var(--muted);transition:background .25s;flex-shrink:0;}
-.demo-dot.active{background:var(--gold);}
-.demo-sep{color:rgba(200,151,62,.4);margin:0 .15rem;}
+nav{display:none;}
+.logo,.logo-w,.logo-l,.logo-t,.nav-right,.cur-toggle,.cur-btn,.demo-bar,.demo-toggle,.demo-dot,.demo-sep{display:none;}
 .gruender-banner{background:linear-gradient(90deg,#7a5c10,var(--gold));padding:.65rem 2rem;text-align:center;display:none;}
 .gruender-banner.visible{display:block;}
 .gruender-banner p{font-size:.8rem;font-weight:600;color:white;}
@@ -442,28 +430,7 @@ footer{background:var(--gd);padding:1.5rem 3rem;}
 </style>
 </head>
 <body>
-<div style="position:fixed;top:72px;right:16px;z-index:9998;">
-  <a href="https://pilneo.ch" target="_top" style="display:flex;align-items:center;gap:.4rem;background:#0d3d28;color:white;font-family:DM Sans,sans-serif;font-size:.72rem;font-weight:600;padding:.45rem .9rem;border-radius:100px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.2);opacity:.85;transition:opacity .2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85">&#8592; Zur&#252;ck</a>
-</div>
 
-
-<nav>
-  <a href="#" class="logo"><div class="logo-w">PILNEO</div><div class="logo-l"></div><div class="logo-t">E-Bike Akkus. Neu gedacht.</div></a>
-  <div class="nav-right">
-    <div class="cur-toggle">
-      <button class="cur-btn active" id="btnCHF" onclick="setCurrency('CHF')">CHF</button>
-      <button class="cur-btn" id="btnEUR" onclick="setCurrency('EUR')">EUR</button>
-    </div>
-    <div class="demo-bar">
-      <span>Demo:</span>
-      <div class="demo-toggle" onclick="toggleHaendler()"><div class="demo-dot" id="dotHaendler"></div><span>&#127978; H&auml;ndler</span></div>
-      <span class="demo-sep">|</span>
-      <div class="demo-toggle" onclick="toggleGruender()"><div class="demo-dot" id="dotGruender"></div><span>&#11088; Gr&uuml;nder</span></div>
-      <span class="demo-sep">|</span>
-      <div class="demo-toggle" onclick="toggleDemoAll()" title="Alle Varianten auf verfügbar schalten"><div class="demo-dot" id="dotDemoAll"></div><span>&#128275; Freischalten</span></div>
-    </div>
-  </div>
-</nav>
 <div class="gruender-banner" id="gruenderBanner"><p>&#11088; Sie sind eingeloggt als <span>Gr&uuml;ndungspartner</span> &mdash; Exklusivkonditionen verf&uuml;gbar.</p></div>
 <div class="haendler-bar" id="haendlerBar"><p>&#127978; Sie sind eingeloggt als <strong>PILNEO-H&auml;ndler</strong> &mdash; System-Check &uuml;bersprungen &middot; EK-Preise aktiv.</p></div>
 <div class="finder-hero">
